@@ -1,0 +1,122 @@
+﻿/* 共通 */
+.outer-invisible {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* 詳細 */
+#detail #detail-window {
+    height: 26px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}
+#detail #detail-window .detail-window-title {
+    width: 100px;
+    background-color: aqua;
+    text-align: center;
+}
+#detail #detail-window .detail-window-part {
+    width: 500px;
+    border: none;
+}
+#detail #detail-window .detail-window-part input {
+    height: 20px;
+    width: 500px;
+}
+
+/** 時間軸 **/
+#gantt .timeheader {
+    font-size: 9px;
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+#gantt .timeheader .timetable {
+    border: 2px hidden;
+    table-layout: fixed;
+    position: relative;
+    text-align: center;
+    border-collapse: collapse;
+}
+#gantt .timeheader .timetable tr,
+#gantt .timeheader .timetable td {
+    border: 1px hidden;
+    white-space: nowrap;
+    padding: 0px;
+}
+#gantt div.timeheader {
+}
+
+/** ガントチャート **/
+#gantt #field {
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#gantt #field tr td.field-header {
+    background-color: aqua;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+#gantt #field tr td.field-header:hover {
+    overflow: visible;
+}
+#gantt #field .box {
+    margin: 2px;
+    position: relative;
+    height: 95%;
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+    cursor: pointer;
+    transition: background 1s ease;
+}
+#gantt #field .box .resize {
+    transition: background 1s ease 1s;
+}
+#gantt #field .box .resize-left {
+    height: 100%;
+    float: left;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#gantt #field .box .resize-right {
+    height: 100%;
+    float: right;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: ew-resize;
+}
+#gantt #field .box .box-label {
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: center;
+}
+
+/** ガントチャート ボックス **/
+#gantt #field .box-color { background: cyan; }
+#gantt #field .box-color .resize { background: cadetblue; }
+
+/* 詳細表示中 */
+#gantt #field .box.detail-select { background: cadetblue; }
+#gantt #field .box.detail-select .resize { background: cyan; }
+
