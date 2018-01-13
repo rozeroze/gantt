@@ -1,7 +1,7 @@
 # gantt
 gantt like time-scheduler
 
-# sample
+# Demo
 https://rozeroze.github.io/gantt/
 
 # License
