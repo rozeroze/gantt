@@ -1,4 +1,4 @@
-﻿try {
+try {
 
 var Gantt = function () {
     var gantt = {};
@@ -15,6 +15,7 @@ var Gantt = function () {
         gantt.WIDTH_RESIZES = config.width.resize * 2;
         gantt.HEIGHT_CELL = config.height.cell;
         gantt.HEIGHT_CELL_HALF = Math.round(config.height.cell / 2);
+        gantt.HEIGHT_CELL_WITH_BORDER = config.height.cell + config.width.border;
         gantt.OFFSET_CELL = -6;
         gantt.OFFSET_CELL_RESIZE = (config.width.border * -2) -6;
         gantt.FIELD_MAX_ROW = config.row.count;
@@ -22,7 +23,7 @@ var Gantt = function () {
         gantt.BASE_ZINDEX = config.zindex.base;
         gantt.EVENT_RESIZABLE = config.resizable;
         gantt.EVENT_MOVABLE = config.movable;
-
+        
         // field
         var field = document.createElement('table');
         {
@@ -297,9 +298,9 @@ var Gantt = function () {
             };
 
             // Boxの新しい設定値
-            var __top = Math.round(parseInt(_box.style.top, 10) / gantt.HEIGHT_CELL);
-            var __left = Math.round(parseInt(_box.style.left, 10) / gantt.WIDTH_CELL);
-            var __resize = Math.round((parseInt(_box.style.width, 10) - _width) / gantt.WIDTH_CELL);
+            var __top = Math.round(parseInt(_box.style.top, 10) / gantt.HEIGHT_CELL_WITH_BORDER);
+            var __left = Math.round(parseInt(_box.style.left, 10) / gantt.WIDTH_CELL_WITH_BORDER);
+            var __resize = Math.round((parseInt(_box.style.width, 10) - _width) / gantt.WIDTH_CELL_WITH_BORDER);
             var __ts;
             var __te;
             {
