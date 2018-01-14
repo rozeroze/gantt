@@ -10,7 +10,7 @@ var Gantt = function () {
         // CONST NUMBERS
         gantt.WIDTH_HEADER = config.width.header;
         gantt.WIDTH_CELL = config.width.cell;
-        gantt.WIDTH_CELL_WITH_BORDER = config.width.cell + config.width.border;
+        gantt.WIDTH_CELL_WITH_BORDER = config.width.cell + (config.width.border * 2);
         gantt.WIDTH_RESIZE = config.width.resize;
         gantt.WIDTH_RESIZES = config.width.resize * 2;
         gantt.HEIGHT_CELL = config.height.cell;
