@@ -10,7 +10,7 @@ var Gantt = function () {
         // CONST NUMBERS
         gantt.WIDTH_HEADER = config.width.header;
         gantt.WIDTH_CELL = config.width.cell;
-        gantt.WIDTH_CELL_WITH_BORDER = config.width.cell + (config.width.border * 2);
+        gantt.WIDTH_CELL_WITH_BORDER = config.width.cell + config.width.border;
         gantt.WIDTH_RESIZE = config.width.resize;
         gantt.WIDTH_RESIZES = config.width.resize * 2;
         gantt.HEIGHT_CELL = config.height.cell;
@@ -298,8 +298,8 @@ var Gantt = function () {
 
             // Boxの新しい設定値
             var __top = Math.round(parseInt(_box.style.top, 10) / gantt.HEIGHT_CELL);
-            var __left = Math.round(parseInt(_box.style.left, 10) / gantt.WIDTH_CELL_WITH_BORDER);
-            var __resize = Math.round((parseInt(_box.style.width, 10) - _width) / gantt.WIDTH_CELL_WITH_BORDER);
+            var __left = Math.round(parseInt(_box.style.left, 10) / gantt.WIDTH_CELL);
+            var __resize = Math.round((parseInt(_box.style.width, 10) - _width) / gantt.WIDTH_CELL);
             var __ts;
             var __te;
             {
