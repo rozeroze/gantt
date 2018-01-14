@@ -298,8 +298,8 @@ var Gantt = function () {
 
             // Boxの新しい設定値
             var __top = Math.round(parseInt(_box.style.top, 10) / gantt.HEIGHT_CELL);
-            var __left = Math.round(parseInt(_box.style.left, 10) / gantt.WIDTH_CELL);
-            var __resize = Math.round((parseInt(_box.style.width, 10) - _width) / gantt.WIDTH_CELL);
+            var __left = Math.round(parseInt(_box.style.left, 10) / gantt.WIDTH_CELL_WITH_BORDER);
+            var __resize = Math.round((parseInt(_box.style.width, 10) - _width) / gantt.WIDTH_CELL_WITH_BORDER);
             var __ts;
             var __te;
             {
