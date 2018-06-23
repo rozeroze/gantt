@@ -162,7 +162,7 @@ function setDetails(selector) {
     _header.innerHTML = '<span>詳細</span>';
     var _part = document.createElement('div');
     _part.classList.add('detail-window-part');
-    _part.innerHTML = '<input type="text" id="detail-text" />';
+    _part.innerHTML = '<input type="text" id="detail-text" readonly />';
 
     _detail.appendChild(_header);
     _detail.appendChild(_part);
