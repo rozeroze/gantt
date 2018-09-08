@@ -82,6 +82,7 @@ var Gantt = function () {
                         config.border.in.width + 'px',
                         config.border.in.style,
                         config.border.in.color].join(' ');
+                    tds[d].style.borderBottomColor = config.border.highlight.color;
                     if ((_q + d) % 4 == 0) {
                         tds[d].style.borderRight = [
                             config.border.in.width + 'px',
