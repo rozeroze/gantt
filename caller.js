@@ -102,10 +102,10 @@
                 in: {
                     width: 1,
                     style: 'solid',
-                    color: 'gray'
+                    color: 'aqua'
                 },
                 highlight: {
-                    color: 'aqua'
+                    color: 'gray'
                 }
             },
             col: _col,
